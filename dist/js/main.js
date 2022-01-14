@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n//импорт модулей\r\n\r\n\r\n\r\n\r\n\r\n//подключение модулей\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)();\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu */ \"./modules/menu.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scroll */ \"./modules/scroll.js\");\n//импорт модулей\r\n\r\n\r\n\r\n\r\n\r\n\r\n//подключение модулей\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)();\r\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_1__.menu)();\r\n(0,_modules_scroll__WEBPACK_IMPORTED_MODULE_2__.scroll)();\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/menu.js":
+/*!*************************!*\
+  !*** ./modules/menu.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menu\": () => (/* binding */ menu)\n/* harmony export */ });\nconst menu = () => {\r\n\r\n    const mobileMenu = document.querySelector('.mobile-menu');\r\n\r\n\r\n    const goToAncor = (e) => {\r\n        document.querySelector(e.hash).scrollIntoView({\r\n            behavior: 'smooth',\r\n            block: 'start'\r\n        });\r\n    };\r\n\r\n\r\n    document.addEventListener('click', (e) => {\r\n        e.preventDefault();\r\n        if(e.target.closest('.mob-menu-btn')){\r\n            mobileMenu.style.right = 0;\r\n        }\r\n    \r\n        if(e.target.closest('.mobile-menu-close')){\r\n            mobileMenu.style.right = ''; \r\n        }\r\n\r\n        if(e.target.matches('ul > li > a') || e.target.matches('menu > a')){\r\n            goToAncor(e.target.closest('a'));\r\n        }\r\n        \r\n    });\r\n\r\n};\n\n//# sourceURL=webpack:///./modules/menu.js?");
 
 /***/ }),
 
@@ -27,6 +37,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"modal\": () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = () => {\r\n    \r\n    const modalOverlay = document.querySelector('.modal-overlay');\r\n    const modalCallback = document.querySelector('.modal-callback');\r\n\r\n\r\n    document.addEventListener('click', e => {\r\n        \r\n        if(e.target.closest('.callback-btn')) {\r\n            modalCallback.style.display = 'block';\r\n            modalOverlay.style.display = 'block';\r\n\r\n            modalOverlay.classList.remove('hide'); \r\n            modalOverlay.classList.add('show');\r\n\r\n            modalCallback.classList.remove('hide'); \r\n            modalCallback.classList.add('show');\r\n        }\r\n\r\n\r\n        if(e.target.closest('.modal-close') || e.target.closest('.modal-overlay')) {\r\n            modalCallback.classList.remove('show');\r\n            modalCallback.classList.add('hide'); \r\n\r\n            modalOverlay.classList.remove('show');\r\n            modalOverlay.classList.add('hide');\r\n            setTimeout(()=> {\r\n                modalCallback.style.display = 'none';\r\n            }, 200);\r\n            setTimeout(()=> {\r\n                modalOverlay.style.display = 'none';\r\n            }, 400);\r\n        }\r\n    });\r\n};\n\n//# sourceURL=webpack:///./modules/modal.js?");
+
+/***/ }),
+
+/***/ "./modules/scroll.js":
+/*!***************************!*\
+  !*** ./modules/scroll.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"scroll\": () => (/* binding */ scroll)\n/* harmony export */ });\nconst scroll = () => {\r\n    const scrollBtn = document.querySelector('.up');\r\n    \r\n\r\n    scrollBtn.addEventListener('click', e => {\r\n        document.querySelector('.main-wrapper').scrollIntoView({\r\n            behavior: 'smooth',\r\n            block: 'start'\r\n        });\r\n    });\r\n\r\n    document.addEventListener('scroll', e => {\r\n        if(e.target.scrollingElement.scrollTop >= document.querySelector('.services-section').offsetTop) {\r\n            scrollBtn.classList.remove('d-none');\r\n        } else {\r\n            scrollBtn.classList.add('d-none');\r\n        }\r\n    });\r\n\r\n};\n\n//# sourceURL=webpack:///./modules/scroll.js?");
 
 /***/ })
 
