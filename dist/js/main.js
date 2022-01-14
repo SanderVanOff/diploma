@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n//импорт модулей\r\n\r\n\r\n\r\n\r\n\r\n//подключение модулей\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)();\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu */ \"./modules/menu.js\");\n//импорт модулей\r\n\r\n\r\n\r\n\r\n\r\n\r\n//подключение модулей\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)();\r\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_1__.menu)();\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/menu.js":
+/*!*************************!*\
+  !*** ./modules/menu.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menu\": () => (/* binding */ menu)\n/* harmony export */ });\nconst menu = () => {\r\n\r\n    const mobileMenu = document.querySelector('.mobile-menu');\r\n\r\n\r\n    const goToAncor = (e) => {\r\n        document.querySelector(e.hash).scrollIntoView({\r\n            behavior: 'smooth',\r\n            block: 'start'\r\n        });\r\n    };\r\n\r\n\r\n    document.addEventListener('click', (e) => {\r\n        e.preventDefault();\r\n        if(e.target.closest('.mob-menu-btn')){\r\n            mobileMenu.style.right = 0;\r\n        }\r\n    \r\n        if(e.target.closest('.mobile-menu-close')){\r\n            mobileMenu.style.right = ''; \r\n        }\r\n\r\n        if(e.target.matches('ul > li > a') || e.target.matches('menu > a')){\r\n            goToAncor(e.target.closest('a'));\r\n        }\r\n        \r\n    });\r\n\r\n};\n\n//# sourceURL=webpack:///./modules/menu.js?");
 
 /***/ }),
 

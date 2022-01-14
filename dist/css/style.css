@@ -454,6 +454,7 @@ a.absolute {
 }
 .mob-menu-btn {
 	margin: 24px 5px 0 20px;
+	cursor: pointer;
 }
 .mob-menu-btn span {
 	display: block;
@@ -513,6 +514,7 @@ a.absolute {
 .mobile-menu-close.close {
 	top: 25px;
 	right: 25px;
+	cursor: pointer;
 }
 .callback-btn {
 	padding: 0 30px;
