@@ -6,7 +6,7 @@ export const modal = () => {
 
     document.addEventListener('click', e => {
         
-        if(e.target.closest('.callback-btn')) {
+        if(e.target.closest('.callback-btn') || e.target.closest('.button-services')) {
             modalCallback.style.display = 'block';
             modalOverlay.style.display = 'block';
 
