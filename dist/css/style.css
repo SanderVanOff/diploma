@@ -338,6 +338,63 @@ a.absolute {
 	margin-top: -1px;
 	background: #f02a29;
 }
+.modal-overlay.show {
+	animation: showOverlay 0.2s ease-in;
+}
+
+.modal-callback.show {
+	animation: showModal 0.4s ease-in;
+}
+.modal-overlay.hide {
+	animation: hideOverlay 0.4s ease-out;
+}
+.modal-callback.hide {
+	animation: hideModal 0.2s ease-out;
+}
+
+@keyframes showModal {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+@keyframes showOverlay {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes hideModal {
+	0% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-50%) scale(0);
+	}
+}
+
+@keyframes hideOverlay {
+	0% {
+		opacity: 1;
+		/* transform: scale(1); */
+	}
+	100% {
+		opacity: 0;
+		/* transform: scale(0); */
+	}
+}
 /**************************************/
 .header-push {
 	height: 101px;
