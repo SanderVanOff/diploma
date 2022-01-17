@@ -3,6 +3,7 @@ import {modal} from './modules/modal';
 import {menu} from './modules/menu';
 import {scroll} from './modules/scroll';
 import {slider} from './modules/slider';
+import {carousel} from './modules/carousel';
 
 
 
@@ -19,3 +20,5 @@ slider({
     dotActiveClass: 'dot-active',
     timer: 3000
 });
+
+carousel();

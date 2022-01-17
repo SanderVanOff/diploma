@@ -6,7 +6,7 @@ export const modal = () => {
 
     document.addEventListener('click', e => {
         
-        if(e.target.closest('.callback-btn') || e.target.closest('.button-services')) {
+        if(e.target.closest('.callback-btn') || e.target.closest('.button-services') || e.target.closest('.fancyboxModal')) {
             modalCallback.style.display = 'block';
             modalOverlay.style.display = 'block';
 
@@ -16,7 +16,6 @@ export const modal = () => {
             modalCallback.classList.remove('hide'); 
             modalCallback.classList.add('show');
         }
-
 
         if(e.target.closest('.modal-close') || e.target.closest('.modal-overlay')) {
             modalCallback.classList.remove('show');
