@@ -4,6 +4,7 @@ import {menu} from './modules/menu';
 import {scroll} from './modules/scroll';
 import {slider} from './modules/slider';
 import {carousel} from './modules/carousel';
+import {accordeon} from './modules/accordeon';
 
 
 
@@ -22,3 +23,4 @@ slider({
 });
 
 carousel();
+accordeon();
