@@ -233,6 +233,10 @@ a.absolute {
 	background: #2fab6d !important;
 	color: #fff !important;
 }
+.button:disabled {
+	background: #e9bb26 !important;
+	opacity: 0.5;
+}
 .button.block {
 	display: block;
 	width: 100%;
@@ -395,6 +399,14 @@ a.absolute {
 		/* transform: scale(0); */
 	}
 }
+
+.invalid {
+	display: none;
+	color: red;
+	margin-bottom: 10px;
+	font-size: 10px;
+}
+
 /**************************************/
 .header-push {
 	height: 101px;

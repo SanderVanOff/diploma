@@ -23,6 +23,10 @@ export const modal = () => {
 
             modalOverlay.classList.remove('show');
             modalOverlay.classList.add('hide');
+
+            if(modalCallback.querySelector('.message-block')){
+                modalCallback.querySelector('.message-block').remove();
+            }
             setTimeout(()=> {
                 modalCallback.style.display = 'none';
             }, 200);

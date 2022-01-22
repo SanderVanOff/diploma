@@ -5,6 +5,7 @@ import {scroll} from './modules/scroll';
 import {slider} from './modules/slider';
 import {carousel} from './modules/carousel';
 import {accordeon} from './modules/accordeon';
+import {sendForm} from './modules/sendForm';
 
 
 
@@ -24,3 +25,4 @@ slider({
 
 carousel();
 accordeon();
+sendForm('#form1');
