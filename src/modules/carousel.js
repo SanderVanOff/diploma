@@ -1,6 +1,5 @@
 export const carousel = ({
-    countSlides,
-    response
+    countSlides
 }) => {
 
     const cards = document.querySelectorAll('.carousel-item');

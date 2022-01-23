@@ -24,8 +24,7 @@ slider({
 });
 
 carousel({
-    countSlides: 1,
-    response: true
+    countSlides: 3,
 });
 accordeon();
 sendForm('#form1');
