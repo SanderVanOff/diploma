@@ -39,7 +39,6 @@ export const carousel = ({
             lastIdx--;
             cards[firstIdx].classList.remove('d-none');
             cards[lastIdx].classList.add('d-none');
-            console.log('firstIdx', firstIdx, 'lastIdx', lastIdx);
         }
     };
 
@@ -55,16 +54,16 @@ export const carousel = ({
             lastIdx = 1;
         }
         cards.forEach((item, i) => {
-            if(i < lastIdx) {
+            if (i < lastIdx) {
                 cards[i].classList.remove('d-none');
             } else {
                 item.classList.add('d-none');
             }
-            
+
         });
     };
 
-    
+
     servicesArrow.addEventListener('click', (e) => {
         if (e.target.closest('.arrow-left')) {
             prev(e.target);
@@ -75,7 +74,7 @@ export const carousel = ({
         }
     });
 
-    window.addEventListener('resize', ()=> {
+    window.addEventListener('resize', () => {
         setCountSlides();
         changeActiveButton(document.querySelector('.arrow-left'), cards.length, buttons);
     });
