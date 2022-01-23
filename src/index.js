@@ -23,6 +23,9 @@ slider({
     timer: 3000
 });
 
-carousel();
+carousel({
+    countSlides: 1,
+    response: true
+});
 accordeon();
 sendForm('#form1');

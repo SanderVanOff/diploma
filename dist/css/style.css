@@ -406,7 +406,10 @@ a.absolute {
 	margin-bottom: 10px;
 	font-size: 10px;
 }
-
+.services-carousel {
+	display: flex;
+	justify-content: center;
+}
 /**************************************/
 .header-push {
 	height: 101px;
