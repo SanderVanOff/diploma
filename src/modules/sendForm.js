@@ -30,10 +30,9 @@ export const sendForm = (idForm) => {
                 label.textContent = '';
                 
             } else if(value.trim().length <= 2){
-                console.log(value.trim().length)
                 elem.style.marginBottom = '5px';
                 label.style.display = 'block';
-                label.textContent = 'допустимо не меньше 2 символов';
+                label.textContent = 'допустимо не меньше 3 символов';
             }else {
                 elem.style.marginBottom = '5px';
                 label.style.display = 'block';
