@@ -565,7 +565,7 @@ a.absolute {
 	height: auto;
 	line-height: 1;
 	padding: 10px 20px;
-	display: inline-block;
+	display: inline-block !important;
 	margin-left: 20px;
 	color: #fff;
 	background: transparent;

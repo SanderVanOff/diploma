@@ -24,12 +24,13 @@ export const sendForm = (idForm) => {
         const label = elem.nextElementSibling;
 
         if(type === 'name'){
-            if ((!/[^а-яА-ЯёЁ0-9 -]/ig.test(value) && value.length > 2 || value.length === 0)) {
+            if ((!/[^а-яА-ЯёЁ0-9 -]/ig.test(value) && value.trim().length > 2 || value.length === 0)) {
                 elem.style.marginBottom = '';
                 label.style.display = 'none';
                 label.textContent = '';
                 
-            } else if(value.length <= 2){
+            } else if(value.trim().length <= 2){
+                console.log(value.trim().length)
                 elem.style.marginBottom = '5px';
                 label.style.display = 'block';
                 label.textContent = 'допустимо не меньше 2 символов';

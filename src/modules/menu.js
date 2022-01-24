@@ -21,6 +21,10 @@ export const menu = () => {
             mobileMenu.style.right = ''; 
         }
 
+        if(e.target.closest('.callback-btn')){
+            mobileMenu.style.right = ''; 
+        }
+
         if(e.target.matches('ul > li > a') || e.target.matches('menu > a')){
             goToAncor(e.target.closest('a'));
             mobileMenu.style.right = '';
