@@ -5,6 +5,7 @@ export const modal = () => {
 
 
     document.addEventListener('click', e => {
+        e.stopPropagation();
         
         if(e.target.closest('.callback-btn') || e.target.closest('.button-services') || e.target.closest('.fancyboxModal')) {
             modalCallback.style.display = 'block';
